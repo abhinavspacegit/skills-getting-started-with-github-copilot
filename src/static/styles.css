@@ -89,8 +89,8 @@ section h3 {
 }
 
 .activity-card .participants-list {
-  list-style: disc;
-  padding-left: 20px;
+  list-style: none;
+  padding-left: 0;
   margin: 0;
 }
 
@@ -101,7 +101,21 @@ section h3 {
   background: linear-gradient(180deg, rgba(255,255,255,0.6), rgba(245,245,245,0.6));
   padding: 6px 8px;
   border-radius: 4px;
-  display: list-item;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.activity-card .participants-list li .delete-icon {
+  color: #e53935;
+  cursor: pointer;
+  padding: 4px;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.activity-card .participants-list li .delete-icon:hover {
+  opacity: 1;
 }
 
 .activity-card .participants-list li.no-participants {
